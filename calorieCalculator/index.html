@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tracalorie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Tracalorie</a>
+            <ul class="right hide-on-med-and-down">
+                <a class="btn btn--clear-all"> CLEAR ALL</a>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="row">
+            <div class="container">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Add Meal / Food Item</span>
+                  
+                  <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Add Item" id="meal" type="text" class="validate">
+                        <label for="meal">Meal</label>
+                      </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Add Calories" id="cal" type="number" class="validate">
+                        <label for="cal">Calories</label>
+                      </div>
+                </div>
+
+                <div class="row">
+                    <a class="add-btn waves-effect waves-light btn">
+                            <i class="fa fa-plus"></i>
+                            Add Meal
+                        </a>
+                    <a class="update-btn waves-effect waves-light btn">
+                            <i class="fa fa-plus"></i>
+                            Update Meal
+                        </a>
+                    <a class="delete-btn waves-effect waves-light btn">
+                            <i class="fa fa-plus"></i>
+                            Delete Meal
+                    </a>
+                    <a class="back-btn waves-effect waves-light btn grey right">
+                            <i class="fa fa-chevron-circle-left"></i>
+                            Back
+                    </a>
+                </div>
+
+
+                </div>
+              </div>
+              <h3 class="center-align">Total Calories: 
+                    <span id="total-calories">0</span>
+                </h3>
+
+
+                <ul class="collection" id="item-list">
+                      </ul>
+            </div>
+          </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
