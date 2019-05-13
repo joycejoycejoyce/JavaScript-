@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-.DS_Store
-node_modules/
-=======
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -24,4 +21,4 @@ Thumbs.db
 venv
 node_modules
 .sass-cache
->>>>>>> origin/master
+
