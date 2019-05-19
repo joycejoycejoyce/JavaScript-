@@ -5,6 +5,8 @@ import {ui} from './ui';
 // Get posts on DOM load 
 document.addEventListener('DOMContentLoaded', getPosts);
 document.querySelector('.post-submit').addEventListener('click', submitPost);
+document.querySelector('#posts').addEventListener('click', deletePost);
+
 function getPosts(){
     http.get('http://localhost:3000/posts')
     .then(data=>{ui.showPosts(data)})
@@ -31,7 +33,22 @@ function submitPost(){
         getPosts()
     })
     .catch(err=>{console.log('error when post to server', err)});
-    
-    
+}
 
+function deletePost(e){
+    if (e.target.parentElement.classList.contains('delete')){
+        const id = e.target.parentElement.dataset.id;
+        if (confirm(`Are you sure you want to delete the post?`)){
+            http.delete(`http://localhost:3000/posts/${id}`)
+            .then(data=>{
+                ui.showAlert(data, 'alert alert-success');
+                getPosts();
+            })
+            .catch(err=>{
+                ui.showAlert(err, 'alert alert-danger');
+            })
+            ;
+        }
+    }
+    e.preventDefault();
 }
