@@ -11,23 +11,23 @@
 <body>
     <div class="container">
     <h1>Add Book</h1>
-    <form>
+    <form id="book-form">
         <div>
             <label>Title</label>
-            <input class="u-full-width" type="text"/>
+            <input id="book-form-title" class="u-full-width" type="text"/>
         </div>
         <div>
             <label>Author</label>
-            <input  class="u-full-width"  type="text"/>
+            <input id="book-form-author" class="u-full-width"  type="text"/>
         </div>
         <div>
-            <label>ISBNs</label>
-            <input  class="u-full-width" type="text"/>
+            <label>ISBN</label>
+            <input id="book-form-isbn" class="u-full-width" type="text"/>
         </div>
-        <button class="u-full-width" type="submit">Submit</button>
+        <button class="u-full-width" type="submit">Add Book</button>
     </form>
     <hr/>
-    <table class="u-full-width">
+    <table id="book-table" class="u-full-width">
         <thead>
             <tr>
                 <th>Title</th>
@@ -37,5 +37,6 @@
         </thead>
     </table>
 </div>
+<script src="index.js"></script>
 </body>
 </html>
