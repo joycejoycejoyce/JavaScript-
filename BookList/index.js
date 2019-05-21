@@ -52,8 +52,7 @@ UI.prototype.addBookToList = function(book){
             </a>
         </th>
     `;
-    table.appendChild(newEl);
-    
+    table.appendChild(newEl); 
 }
 
 UI.prototype.clearFields = function(){
